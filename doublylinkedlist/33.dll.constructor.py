@@ -12,12 +12,15 @@ class DLL:
         self.length = 1
     
     def printList(self):
+        print('self.head : ',self.head.value)
+        print('self.tail : ',self.tail.value)
+        print('self.length : ',self.length)
+        print()
         temp = self.head
         while temp is not None :
-            print(temp.value)
+            print('previous : ',temp.prev,'  current : ',temp.value,'  next : ',temp.next)
             temp = temp.next
 
 
 doublyLL = DLL(5)
-print(doublyLL.head.value)
 doublyLL.printList()
